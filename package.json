@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/pongsanti/thype/issues"
   },
-  "homepage": "https://github.com/pongsanti/thype#readme"
+  "homepage": "https://github.com/pongsanti/thype#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }

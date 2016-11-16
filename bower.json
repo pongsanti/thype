@@ -1,0 +1,20 @@
+{
+  "name": "thype",
+  "description": "An exciting type game",
+  "main": "index.js",
+  "authors": [
+    "popsicle"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/pongsanti/thype",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bulma": "^0.2.3"
+  }
+}

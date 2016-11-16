@@ -1,3 +1,4 @@
+var path = require('path')
 var express = require('express')
 var app = express()
 
@@ -5,7 +6,7 @@ app.set('views', './views')
 app.set('view engine', 'pug')
 
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/index.html')
+  res.sendFile(path.join(__dirname, '/index.html'))
 })
 
 app.get('/welcome', function (req, res) {

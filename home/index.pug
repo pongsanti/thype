@@ -5,20 +5,64 @@ html(lang="en")
     link(rel='stylesheet' type='text/css' href='css/bulma.css')
     script(src='bundle.js')
   body
-    section(class='hero')
-      .hero-body
-        .container
-          h1(class='title') Hero title
-          h2(class='subtitle') Hero subtitle
+    section.hero.is-medium.has-text-centered.is-hero
+      div.hero-head
+        div.container
+          nav.nav
+            div.nav-left
+              a.nav-item.is-brand(href='#') 
+                h1(class='title') THYPE!!
     
-    .container
-      .notification
+    div.container
+      div.notification
       | This container is <strong>centered</strong> on desktop.
 
-    .contianer.welcome
-    .contianer.user
+      div.contianer.welcome
+      div.contianer.user
+
+      div(class="tile is-ancestor")
+        div(class="tile is-vertical is-8")
+          div(class="tile")
+            div(class="tile is-parent is-vertical")
+              article(class="tile is-child notification is-primary")
+                p(class="title") Vertical...
+                p(class="subtitle") Top tile
+              
+              article(class="tile is-child notification is-warning")
+                p(class="title") ...tiles
+                p(class="subtitle") Bottom tile
+              
+            
+            div(class="tile is-parent")
+              article(class="tile is-child notification is-info")
+                p(class="title") Middle tile
+                p(class="subtitle") With an image
+          
+          div(class="tile is-parent")
+            article(class="tile is-child notification is-danger")
+              p(class="title") Wide tile
+              p(class="subtitle") Aligned with the right tile
+              div(class="content")
+        
+        div(class="tile is-parent")
+          article(class="tile is-child notification is-success")
+            div(class="content")
+              p(class="title") Tall tile
+              p(class="subtitle") With even more content
+              div(class="content")
+              
+            
+          
+        
+              
+
+    footer.footer
+      div.container
+        div.content.has-text-centered
+          p This is footer
 
   script(src='http://code.jquery.com/jquery-1.11.1.js')
   script.
     $(".welcome").html(welcome({message: "From Chrome welcome"}))
     $(".user").html(user({message: "From Chrome user"}))
+

@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle": "uglifyjs views/*.js --compress --mangle  -o public/bundle.js"
+    "test": "mocha",
+    "pug": "pug --client --no-debug typee/typee.pug --name typee -o views/",
+    "uglify": "uglifyjs views/*.js --compress --mangle  -o public/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -20,10 +21,12 @@
   "homepage": "https://github.com/pongsanti/thype#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "pug": "^2.0.0-beta6"
+    "pug": "^2.0.0-beta6",
+    "superagent": "^2.3.0"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
+    "sinon": "^1.17.6",
     "standard": "^8.5.0",
     "uglify-js": "^2.7.4"
   }

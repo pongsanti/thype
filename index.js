@@ -8,6 +8,10 @@ app.set('view engine', 'pug')
 var home = require('./home')
 app.use('/', home)
 
+// typee
+var typee = require('./typee')
+app.use('/typee', typee)
+
 // statics
 app.use(express.static('public'))
 app.use(express.static('bower_components/bulma'))

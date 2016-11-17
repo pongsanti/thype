@@ -4,6 +4,7 @@ html(lang="en")
     title Let's thype!!
     link(rel='stylesheet' type='text/css' href='css/bulma.css')
     script(src='bundle.js')
+    script(src='fbundle.js')
   body
     section.hero.has-text-centered.is-bold.is-info
       div.hero-head
@@ -35,9 +36,8 @@ html(lang="en")
           div.tile.is-parent.is-8.is-vertical
             div.box.tile.is-child
               p.title Play area
-              div.has-text-centered
-                a.button.is-info New Thype
               div.typee-content
+
             article.tile.is-child.notification.is-light
               p.title Typee Info
               p Lorem Ipsum            
@@ -52,3 +52,7 @@ html(lang="en")
               p.subtitle User's friend list
 
   script(src='http://code.jquery.com/jquery-1.11.1.js')
+  script.
+    $(document).ready(function () {
+      $("div.typee-content").html(typee())
+    })

@@ -1,68 +1,54 @@
 doctype html
 html(lang="en")
   head
-    title thype!
+    title Let's thype!!
     link(rel='stylesheet' type='text/css' href='css/bulma.css')
     script(src='bundle.js')
   body
-    section.hero.is-medium.has-text-centered.is-hero
+    section.hero.has-text-centered.is-bold.is-info
       div.hero-head
         div.container
           nav.nav
             div.nav-left
               a.nav-item.is-brand(href='#') 
                 h1(class='title') THYPE!!
-    
-    div.container
-      div.notification
-      | This container is <strong>centered</strong> on desktop.
+      div.hero-body
+        div.container
+          h1.title Welcome ^_^ Let's thype
+    br
 
-      div.contianer.welcome
-      div.contianer.user
-
-      div(class="tile is-ancestor")
-        div(class="tile is-vertical is-8")
-          div(class="tile")
-            div(class="tile is-parent is-vertical")
-              article(class="tile is-child notification is-primary")
-                p(class="title") Vertical...
-                p(class="subtitle") Top tile
-              
-              article(class="tile is-child notification is-warning")
-                p(class="title") ...tiles
-                p(class="subtitle") Bottom tile
-              
-            
-            div(class="tile is-parent")
-              article(class="tile is-child notification is-info")
-                p(class="title") Middle tile
-                p(class="subtitle") With an image
-          
-          div(class="tile is-parent")
-            article(class="tile is-child notification is-danger")
-              p(class="title") Wide tile
-              p(class="subtitle") Aligned with the right tile
-              div(class="content")
-        
-        div(class="tile is-parent")
-          article(class="tile is-child notification is-success")
-            div(class="content")
-              p(class="title") Tall tile
-              p(class="subtitle") With even more content
-              div(class="content")
-              
-            
-          
-        
-              
-
-    footer.footer
+    section
       div.container
-        div.content.has-text-centered
-          p This is footer
+        div.tile.is-ancestor          
+          div.tile.is-parent.is-vertical.is-2
+            article.tile.is-child.notification.is-danger
+              p.title Stat
+              p.subtitle Player statistics
+            
+            
+            nav.panel.tile.is-child.is-warning
+              p.panel-heading History
+              a.panel-block Match 01
+              a.panel-block Match 02
+              a.panel-block Match 03
+              a.panel-block Match 04              
+          div.tile.is-parent.is-8.is-vertical
+            div.box.tile.is-child
+              p.title Play area
+              div.has-text-centered
+                a.button.is-info New Thype
+              div.typee-content
+            article.tile.is-child.notification.is-light
+              p.title Typee Info
+              p Lorem Ipsum            
+            
+          div.tile.is-parent.is-vertical.is-2
+            article.tile.is-child.notification.is-info
+              p.title User profile
+              p.subtitle Guest
+           
+            article.tile.is-child.notification.is-success
+              p.title Friend list
+              p.subtitle User's friend list
 
   script(src='http://code.jquery.com/jquery-1.11.1.js')
-  script.
-    $(".welcome").html(welcome({message: "From Chrome welcome"}))
-    $(".user").html(user({message: "From Chrome user"}))
-

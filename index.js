@@ -2,17 +2,13 @@ var path = require('path')
 var express = require('express')
 var app = express()
 
-app.set('views', './views')
 app.set('view engine', 'pug')
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '/index.html'))
-})
+// business
+var home = require('./home')
+app.use('/', home)
 
-app.get('/welcome', function (req, res) {
-  res.render('welcome', { title: 'Hey', message: 'Hello there!' })
-})
-
+// statics
 app.use(express.static('public'))
 app.use(express.static('bower_components/bulma'))
 

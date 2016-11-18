@@ -6,8 +6,10 @@
   "scripts": {
     "start": "node index.js",
     "test": "mocha",
-    "pug": "pug --client --no-debug typee/typee.pug --name typee -o views/",
-    "uglify": "uglifyjs views/*.js --compress --mangle  -o public/bundle.js"
+    "pug": "pug --client --no-debug typee/typee.pug --name render_typee -o views/",
+    "uglify-view": "uglifyjs views/*.js --compress --mangle -o public/client-view-bundle.js",
+    "client": "browserify client/typee/typee.js -o public/client-bundle.js -s typee",
+    "client-test": "browserify client/typee/typee.test.js -o client/test_bundle.js"
   },
   "repository": {
     "type": "git",
@@ -21,11 +23,13 @@
   "homepage": "https://github.com/pongsanti/thype#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "pug": "^2.0.0-beta6",
-    "superagent": "^2.3.0"
+    "pug": "^2.0.0-beta6"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
+    "chai": "^3.5.0",
+    "jquery": "^3.1.1",
+    "mocha": "^3.1.2",
     "sinon": "^1.17.6",
     "standard": "^8.5.0",
     "uglify-js": "^2.7.4"
